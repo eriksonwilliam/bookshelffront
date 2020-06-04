@@ -3,11 +3,11 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname + '/dist/bookshelf'));
+app.use(express.static('./dist/bookshelf'));
 
-app.get('/*', function(req,res) {
-
-res.sendFile(path.join(__dirname+'/dist/bookshelf/index.html'));
+app.get('/*', function(req, res) {
+  res.sendFile('index.html', {root: 'dist/bookshelf/'}
+);
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8082);
