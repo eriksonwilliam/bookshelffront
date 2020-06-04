@@ -8,13 +8,23 @@ import { AppComponent } from './app.component';
 import { BookListComponent } from './books/book-list/book-list.component';
 import { BookListItemComponent } from './books/book-list-item/book-list-item.component';
 import { BookFormComponent } from './books/book-form/book-form.component';
+import { LoginComponent } from './account/login/login.component';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { HomeComponent } from './layout/home/home.component';
+import { AuthenticationComponent } from './layout/authentication/authentication.component';
+
+import { httpInterceptorProviders } from './http-interceptors';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     BookListItemComponent,
-    BookFormComponent
+    BookFormComponent,
+    LoginComponent,
+    CreateAccountComponent,
+    HomeComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +32,9 @@ import { BookFormComponent } from './books/book-form/book-form.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
