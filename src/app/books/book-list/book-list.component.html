@@ -1,0 +1,18 @@
+<h2>Livros</h2>
+<hr />
+
+<button type="button" class="btn btn-primary mb-2" [routerLink]="['/new']">
+    Nova tarefa
+</button>
+
+<section>
+    <div *ngIf="books.length == 0" class="alert alert-warning" role="alert">
+        Nenhum livro foi cadastrada ainda.
+    </div>
+
+    <ul class="list-group" *ngIf="books.length > 0" >
+        <li class="list-group-item" *ngFor="let book of books">
+            <app-book-list-item [book]="book" class="book-item"></app-book-list-item>
+        </li>
+    </ul>
+</section>
