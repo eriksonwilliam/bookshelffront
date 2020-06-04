@@ -13,4 +13,8 @@ export class BookService {
   getAll() {
     return this.http.get<Book[]>(`${environment.api}livro/`);
   }
+
+  save(book: Book) {
+    return this.http.post<Book>(`${environment.api}livro/`, book);
+  }
 }
