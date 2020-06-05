@@ -7,12 +7,25 @@
 
 <section>
     <div *ngIf="books.length == 0" class="alert alert-warning" role="alert">
-        Nenhum livro foi cadastrada ainda.
+        Nenhum livro foi cadastrado ainda.
     </div>
 
-    <ul class="list-group" *ngIf="books.length > 0" >
-        <li class="list-group-item" *ngFor="let book of books">
-            <app-book-list-item [book]="book" class="book-item"></app-book-list-item>
-        </li>
-    </ul>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Ano Publicação</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of books">
+        <td>
+          {{ book.titulo }}
+        </td>
+        <td>{{ book.autor }}</td>
+        <td>{{ book.anoPublicacao }}</td>
+      </tr>
+      </tbody>
+    </table>
 </section>
