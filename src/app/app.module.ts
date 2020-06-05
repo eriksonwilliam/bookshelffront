@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookListComponent } from './books/book-list/book-list.component';
-import { BookListItemComponent } from './books/book-list-item/book-list-item.component';
 import { BookFormComponent } from './books/book-form/book-form.component';
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
@@ -19,7 +18,6 @@ import { httpInterceptorProviders } from './http-interceptors';
   declarations: [
     AppComponent,
     BookListComponent,
-    BookListItemComponent,
     BookFormComponent,
     LoginComponent,
     CreateAccountComponent,
